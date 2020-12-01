@@ -12,8 +12,8 @@ drinks.each do |drink|
 end
 mint = Ingredient.create!(name: 'Mint')
 rhum = Ingredient.create!(name: 'Rhum')
-file = URI.open('https://www.google.com/url?sa=i&url=https%3A%2F%2Fblog.tudogostoso.com.br%2Fcardapios%2Fmojito-perfeito-confira-a-receita%2F&psig=AOvVaw0AoIR1XnaMZTVsJPvdbImF&ust=1606937460516000&source=images&cd=vfe&ved=2ahUKEwipk63Vwq3tAhXhALkGHUxkBK4QjRx6BAgAEAc')
+file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
 mojito = Cocktail.create!(name: 'Mojito')
-mojito.photo.attach(io: file, filename: 'mojito.jpg', content_type: 'image/jpg')
+mojito.photo.attach(io: file, filename: 'teste.png', content_type: 'image/png')
 Dose.create!(description: '6 leaves', ingredient: mint, cocktail: mojito)
 Dose.create!(description: '1.5 oz', ingredient: rhum, cocktail: mojito)
