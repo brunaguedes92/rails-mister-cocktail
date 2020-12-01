@@ -1,11 +1,10 @@
 <%= simple_form_for(@cocktail) do |c| %>
   <%= c.error_notification %>
   <%= c.error_notification message: c.object.errors[:base].to_sentence if c.object.errors[:base].present? %>
-
   <div class="form-inputs">
     <%= c.input :name %>
+    <%= c.input :photo, as: :file %>
   </div>
-
   <div class="form-actions d-flex">
     <%= c.button :submit, class: 'btn btn-primary mr-1' %>
     <%= link_to "Back",  cocktails_path, class: "btn btn-outline-primary "%>
