@@ -1,6 +1,6 @@
 <%= simple_form_for [cocktail, dose] do |d| %>
   <%#= d.association :ingredient, as: :input, class: "select2"%>
-  <%= d.association :ingredient, as: :select, :input_html => { class: "select2"} %>
+  <%= d.association :ingredient, as: :select, :input_html => { class: "select2 beautiful-dropdown"}, include_hidden: false  %>
   <%= d.input :description %>
   <%= d.button :submit, class: "btn btn-primary" %>
   <%= link_to "Back",  cocktail_path(cocktail), class: "btn btn-outline-primary "%>
