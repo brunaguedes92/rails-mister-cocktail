@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="container d-flex justify-content-center mt-4">
+    <h1>Cocktails</h1>
+  </div>
+  <p class="d-flex justify-content-end"> <%= link_to 'Add new Cocktail', new_cocktail_path, class: "btn btn-outline-primary" %></p>
+
+  <div class="row row-cols-1 row-cols-md-3">
+    <% @cocktails.each do |cocktail|%>
+      <div class="col mb-4">
+        <div class="card h-100">
+          <%= image_tag cocktail.image_url, alt: cocktail.name, width: 200, class: "card-img-top h-60"%>
+          <div class="card-body">
+            <h5 class="card-title"><%= cocktail.name %></h5>
+            <%= link_to 'Detalhes', cocktail_path(cocktail), class: "card-link" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+<hr>
+
+ <div class="row row-cols-1 row-cols-md-3">
+    <% @cocktails.each do |cocktail|%>
+      <div class="col mb-4">
+        <%= link_to cocktail_path(cocktail) do %>
+          <div class="card bg-dark text-white h-100">
+            <%= image_tag cocktail.image_url, alt: cocktail.name, width: 200, class: "card-img"%>
+            <div class="card-img-overlay">
+              <h2 class="card-title"><%= cocktail.name %></h2>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

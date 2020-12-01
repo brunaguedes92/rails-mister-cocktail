@@ -1,0 +1,14 @@
+<div class="container d-flex justify-content-center mt-4">
+  <h1> <%= @cocktail.name %></h1>
+</div>
+
+<h2>Ingredient list</h2>
+<ul>
+  <% @doses.each do |dose| %>
+    <li><%= dose.description %> <%= dose.ingredient.name %></li>
+  <% end %>
+</ul>
+<div class="container">
+  <%= link_to "Add Ingredient",  new_cocktail_dose_path(@cocktail), class: "btn btn-primary"%>
+  <%= link_to "Back",  cocktails_path, class: "btn btn-outline-primary"%>
+</div>
