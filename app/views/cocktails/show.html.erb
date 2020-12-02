@@ -6,12 +6,12 @@
   <div class="row row-cols-1 row-cols-md-2">
     <div class="col">
       <div class="d-flex justify-content-center">
-        <h2 class="mb-4">Ingredients list</h2>
+        <h2 class="mb-4">Ingredients</h2>
       </div>
       <%= render 'cocktails/shared/table', doses: @doses %>
     </div>
     <div class="col d-flex justify-content-center mt-4 pt-4">
-      <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+      <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill, class: "img-thumbnail" %>
     </div>
   </div>
 </div>
