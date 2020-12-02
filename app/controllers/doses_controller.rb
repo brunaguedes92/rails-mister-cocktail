@@ -27,6 +27,10 @@ class DosesController < ApplicationController
   def destroy
     dose = Dose.find(params[:id])
     dose.destroy
+    respond_to do |format|
+      format.html { redirect_to cocktail_url, notice: 'Dose was successfully deleted.' }
+      format.json { head :no_content }
+    end
   end
 
   def dose_params
