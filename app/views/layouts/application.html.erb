@@ -12,8 +12,10 @@
     <%# <link rel="stylesheet" href="node_modules/select2/dist/css/select2.css"> %>
   </head>
   <body>
-    <div class="container">
+    <%= render 'shared/navbar' %>
+    <div class="container mb-5">
       <%= yield %>
     </div>
+    <%= render 'shared/footer' %>
   </body>
 </html>

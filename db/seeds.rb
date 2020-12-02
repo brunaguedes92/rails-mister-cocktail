@@ -12,8 +12,8 @@ drinks.each do |drink|
 end
 mint = Ingredient.create!(name: 'Mint')
 rhum = Ingredient.create!(name: 'Rhum')
-file = URI.open('https://giantbomb1.cbsistatic.com/uploads/original/9/99864/2419866-nes_console_set.png')
+file = URI.open('https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg')
 mojito = Cocktail.create!(name: 'Mojito')
-mojito.photo.attach(io: file, filename: 'teste.png', content_type: 'image/png')
+mojito.photo.attach(io: file, filename: 'mojito.jpg', content_type: 'image/jpg')
 Dose.create!(description: '6 leaves', ingredient: mint, cocktail: mojito)
 Dose.create!(description: '1.5 oz', ingredient: rhum, cocktail: mojito)
