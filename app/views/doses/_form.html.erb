@@ -3,5 +3,5 @@
   <%= d.association :ingredient, as: :select, :input_html => { class: "select2 beautiful-dropdown"}, include_hidden: false  %>
   <%= d.input :description %>
   <%= d.button :submit, class: "btn btn-primary" %>
-  <%= link_to "Back",  cocktail_path(cocktail), class: "btn btn-outline-primary "%>
+  <%= link_to "Back", :back, class: "btn btn-outline-primary "%>
 <% end %>

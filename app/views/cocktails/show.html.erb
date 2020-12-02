@@ -9,6 +9,10 @@
         <h2 class="mb-4">Ingredients</h2>
       </div>
       <%= render 'cocktails/shared/table', doses: @doses %>
+      <div class="container">
+        <%= link_to "Add Ingredient",  new_cocktail_dose_path(@cocktail), class: "btn btn-primary"%>
+        <%= link_to "Back", :back, class: "btn btn-outline-primary"%>
+      </div>
     </div>
     <div class="col d-flex justify-content-center mt-4 pt-4">
       <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill, class: "img-thumbnail" %>
@@ -16,7 +20,3 @@
   </div>
 </div>
 
-<div class="container">
-  <%= link_to "Add Ingredient",  new_cocktail_dose_path(@cocktail), class: "btn btn-primary"%>
-  <%= link_to "Back",  cocktails_path, class: "btn btn-outline-primary"%>
-</div>
