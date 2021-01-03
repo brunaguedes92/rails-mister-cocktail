@@ -10,9 +10,12 @@ require("channels")
 
 import 'bootstrap';
 import { initSelect2 } from '../components/select';
+import { initStarRating } from '../plugins/init_star_rating';
+
 document.addEventListener('turbolinks:load', () => {
   // Call your JS functions here
   initSelect2();
+  initStarRating();
 });
 
 

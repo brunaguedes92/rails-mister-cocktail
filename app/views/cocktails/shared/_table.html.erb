@@ -7,7 +7,7 @@
     </tr>
   </thead>
   <tbody>
-    <% @doses.each do |dose| %>
+    <% cocktail.doses.each do |dose| %>
       <tr> 
         <td> <%= dose.ingredient.name %> </td>
         <td> <%= dose.description %> </td>

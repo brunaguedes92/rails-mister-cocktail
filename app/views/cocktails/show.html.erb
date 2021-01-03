@@ -8,7 +8,7 @@
       <div class="d-flex justify-content-center">
         <h2 class="mb-4">Ingredients</h2>
       </div>
-      <%= render 'cocktails/shared/table', doses: @doses %>
+      <%= render 'cocktails/shared/table', cocktail: @cocktail%>
       <div class="container">
         <%= link_to "Add Ingredient",  new_cocktail_dose_path(@cocktail), class: "btn btn-primary"%>
         <%= link_to "Back", :back, class: "btn btn-outline-primary"%>
@@ -20,3 +20,4 @@
   </div>
 </div>
 
+<%= render "reviews/new", cocktail: @cocktail, review: @review %>
